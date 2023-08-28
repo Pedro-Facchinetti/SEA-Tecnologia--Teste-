@@ -1,96 +1,70 @@
-# SEA-Tecnologia--Teste-
-Este repositório representa meu teste para vaga de desenvolvedor back-end para a empresa SEA-Tecnologia.
+# Getting Started with Create React App
 
-Devido a falta de tempo por minha parte, tenho algumas considerações a fazer:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Não tive tempo de ajustar os testes para API, apesar da aplicação funcionar corretamente, os testes não irão funcionar.
+## Available Scripts
 
-- Não tive tempo para terminar a documentação via Swagger
+In the project directory, you can run:
 
-- Não tive tempo para aplicar responsividade na página web (feita em react). Porém, ela é funcional e você pode acessa-lá através do endereço "http://localhost:8080/" no seu
+### `npm start`
 
-- Existem duas contas de usuário para acessar o sistema, as contas são criadas (se já não estiverem criadas) ao inicializar a aplicação
-  (Usuário: Admin , senha: 123qwel@#; Usuário: Padrão, senha: 123qwe123 )
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-  - A aplicação usa o Java 20 e o Maven 3.9.1
- 
-  - Documentação do Sistema
-1. Pacotes e Configuração
-com.pedrofacchinetti.TesteBackEnd.config
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Este pacote contém classes de configuração do Spring.
+### `npm test`
 
-AppConfig: Define a estratégia de codificação de senha para o Spring Security.
-WebConfig: Estende WebMvcConfigurer para configurar a maneira como o Spring MVC lida com as solicitações de URL.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-2. Controladores
-com.pedrofacchinetti.TesteBackEnd.controller
+### `npm run build`
 
-AuthenticationController: Lida com autenticação de usuários.
-Método authenticateUser: Autentica um usuário e retorna um JWT se a autenticação for bem-sucedida.
-ClienteController: Lida com operações relacionadas a entidades Cliente.
-Métodos CRUD para Cliente e verificação de roles para operações de exclusão.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-3. DTOs
-com.pedrofacchinetti.TesteBackEnd.dto
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-ClienteDTO: Representa um cliente com informações relacionadas.
-EmailDTO: Representa um e-mail.
-EnderecoDTO: Representa um endereço.
-LoginRequest: Usado para fazer login, contendo nome de usuário e senha.
-LoginResponse: Representa a resposta após o login bem-sucedido, contendo nome de usuário, role e token.
-TelefoneDTO: Representa um telefone.
-UserDTO: Representa um usuário.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-4. Enums
-com.pedrofacchinetti.TesteBackEnd.enums
+### `npm run eject`
 
-TipoTelefone: Define tipos de telefone - RESIDENCIAL, COMERCIAL, CELULAR.
-UserRole: Define roles de usuário - ADMIN, PADRAO.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-5. Exceções
-com.pedrofacchinetti.TesteBackEnd.exception
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-ApiException: Exceção personalizada para a API.
-GlobalExceptionHandler: Controlador de exceções global que lida com várias exceções e retorna respostas HTTP apropriadas.
-ResourceNotFoundException: Lançada quando um recurso solicitado não é encontrado.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-6. Modelos
-com.pedrofacchinetti.TesteBackEnd.model
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Cliente: Representa uma entidade Cliente com suas propriedades e relacionamentos.
-Email: Representa uma entidade Email relacionada a um Cliente.
-Endereco: Representa um endereço embutido na entidade Cliente.
-Telefone: Representa um telefone associado a um Cliente.
-User: Representa um usuário do sistema.
+## Learn More
 
-7. Repositórios
-com.pedrofacchinetti.TesteBackEnd.repository
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-ClienteRepository: Repositório para operações CRUD em Cliente.
-EmailRepository: Repositório para operações CRUD em Email.
-TelefoneRepository: Repositório para operações CRUD em Telefone.
-UserRepository: Repositório para operações CRUD em User e busca por nome de usuário.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-8. Serviços
-com.pedrofacchinetti.TesteBackEnd.service
+### Code Splitting
 
-ClienteService: Serviço para operações relacionadas a Cliente.
-DtoMapper: Um serviço que ajuda a mapear entidades para DTOs e vice-versa.
-EmailService: Serviço para operações relacionadas a Email.
-TelefoneService: Serviço para operações relacionadas a Telefone.
-UserService: Serviço para operações relacionadas a User, incluindo autenticação.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-9. Utilidades
-com.pedrofacchinetti.TesteBackEnd.util
+### Analyzing the Bundle Size
 
-JwtProvider: Fornece métodos para gerar, validar e extrair informações de tokens JWT.
-10. Aplicação Principal
-com.pedrofacchinetti.TesteBackEnd.TesteBackEndApplication
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Ponto de entrada da aplicação Spring Boot.
-Inicializa usuários padrão no banco de dados.
+### Making a Progressive Web App
 
-11. Página web
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Feita em React, mas sem responsividade.
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
