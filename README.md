@@ -5,6 +5,8 @@ Devido a falta de tempo por minha parte, tenho algumas considerações a fazer:
 
 - Não tive tempo de ajustar os testes para API, apesar da aplicação funcionar corretamente, os testes não irão funcionar.
 
+- Não tive tempo para terminar a documentação via Swagger
+
 - Não tive tempo para aplicar responsividade na página web (feita em react). Porém, ela é funcional e você pode acessa-lá através do endereço "http://localhost:8080/" no seu
 
 - Existem duas contas de usuário para acessar o sistema, as contas são criadas (se já não estiverem criadas) ao inicializar a aplicação
